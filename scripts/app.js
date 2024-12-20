@@ -223,13 +223,11 @@ function changeToDarkMode() {
   console.log(button_dark_mode.src)
   if (
     button_dark_mode.src ==
-    'https://ali-al-ahmad.github.io/calculator/assets/dark_mode.svg'
+    'https://ali-al-ahmad.github.io/assets/dark_mode.svg'
   ) {
-    button_dark_mode.src =
-      'https://ali-al-ahmad.github.io/calculator/assets/white.svg'
+    button_dark_mode.src = 'https://ali-al-ahmad.github.io/assets/dark_mode.svg'
   } else {
-    button_dark_mode.src =
-      'https://ali-al-ahmad.github.io/calculator/assets/dark_mode.svg'
+    button_dark_mode.src = 'https://ali-al-ahmad.github.io/assets/dark_mode.svg'
   }
 }
 
