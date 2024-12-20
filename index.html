@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <title>Prefix | Postfix | Calculator</title>
+  <link rel="icon" href="assets/calculator_icon.png" />
+</head>
+
+<body>
+  <div class="header-section">
+    <h1>Prefix | Postfix Calculator</h1>
+    <h2>Please press space after every number</h2>
+    <h3>Example '+ 24 2 => 26'</h3>
+  </div>
+  <div class="page">
+    <section class="left-section">
+      <div class="explanation">
+        <h2>Prefix Evaluation</h2>
+        <p>Expression: + 9 * 2 3</p>
+        <ol>
+          <li>Start from the rightmost operand: 9 and * 2 3.</li>
+          <li>Evaluate * 2 3 → 2 * 3 = 6.</li>
+          <li>Add 9 + 6 = 15.</li>
+        </ol>
+      </div>
+
+      <div class="explanation">
+        <h2>Postfix Evaluation</h2>
+        <p>Expression: 9 2 3 * +</p>
+        <ol>
+          <li>Start with the first operator *: 2 * 3 = 6.</li>
+          <li>Add 9 + 6 = 15.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="calculator-container">
+      <input id="result" class="result-section" placeholder="0" value=""></input>
+      <div class="buttons-section">
+        <div class="numbers-section">
+          <div class="three-numbers-section">
+            <div class="number num-op" value="7">7</div>
+            <div class="number num-op" value="8">8</div>
+            <div class="number num-op" value="9">9</div>
+          </div>
+          <div class="three-numbers-section">
+            <div class="number num-op" value="4">4</div>
+            <div class="number num-op" value="5">5</div>
+            <div class="number num-op" value="6">6</div>
+          </div>
+          <div class="three-numbers-section">
+            <div class="number num-op" value="1">1</div>
+            <div class="number num-op" value="2">2</div>
+            <div class="number num-op" value="3">3</div>
+          </div>
+          <div class="three-numbers-section">
+            <div id="clear-All" class="number">AC</div>
+            <div class="number num-op" value="0">0</div>
+            <div id="delete-last" class="number">DEL</div>
+          </div>
+          <div class="three-numbers-section">
+
+            <div id="space-btn" class="number">SPACE</div>
+
+          </div>
+        </div>
+        <div class="operations-section">
+
+          <div class="operation num-op">+</div>
+          <div class="operation num-op">-</div>
+          <div class="operation num-op">x</div>
+          <div class="operation num-op">/</div>
+          <div id="equal-btn" class="operation">=</div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="right-section">
+      <table id="stack-table" class="right-section-table">
+        <thead>
+          <tr>
+            <th>Step</th>
+            <th>Expression</th>
+            <th>Stack Operations</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <img id="dark-mode" src="assets/dark_mode.svg" alt="darkmode"></img>
+  </div>
+  </div>
+  <script src="scripts/app.js"></script>
+</body>
+
+</html>
