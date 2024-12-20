@@ -14,7 +14,8 @@ A simple web-based calculator to evaluate prefix and postfix expressions.
 ## Usage
 1. Enter a prefix or postfix expression.
 2. put operant to the left for prefix and to the right for postfix
-3. Click on "=" button to see the result. with steps detailed
+3. keep spaces between numbers multiple digits are allowed
+4. Click on "=" button to see the result. with steps detailed
 
 ## Technologies
 - **HTML**, **CSS**, **JavaScript**.
@@ -22,4 +23,4 @@ A simple web-based calculator to evaluate prefix and postfix expressions.
 ## Contact
 For questions, reach out to:
 - **Email**: [ali.alahmad.cs@gmail.com]
-- **GitHub**: [https://github.com/yourusername](https://github.com/Ali-Al-Ahmad)
+- **GitHub**: [https://github.com/Ali-Al-Ahmad](https://github.com/Ali-Al-Ahmad)
