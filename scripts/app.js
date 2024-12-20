@@ -220,14 +220,9 @@ function formatSpacesInExpression(expression) {
 
 function changeToDarkMode() {
   document.body.classList.toggle('dark-mode')
-  console.log(button_dark_mode.src)
-  if (
-    button_dark_mode.src ==
-    'https://ali-al-ahmad.github.io/assets/dark_mode.svg'
-  ) {
-    button_dark_mode.src = 'https://ali-al-ahmad.github.io/assets/white.svg'
-  } else {
-    button_dark_mode.src = 'https://ali-al-ahmad.github.io/assets/dark_mode.svg'
-  }
+  let current_source = button_dark_mode.src
+  if (current_source.includes('dark')) {
+    button_dark_mode.src = current_source.replace('dark_mode.svg', 'white.svg')
+  } 
 }
 
