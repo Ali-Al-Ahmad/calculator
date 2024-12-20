@@ -183,3 +183,47 @@ function isOperator(number) {
     number == '/'
   )
 }
+function focusOnInputLastCharacter() {
+  const input_text_length = result.value.length
+  result.setSelectionRange(input_text_length, input_text_length + 1)
+  result.focus()
+}
+
+function formatSpacesInExpression(expression) {
+  let formattedExpression = ''
+  let spaceAdded = false
+
+  for (let i = 0; i < expression.length; i++) {
+    const char = expression[i]
+    if (char === ' ') {
+      if (!spaceAdded) {
+        formattedExpression += char
+        spaceAdded = true
+      }
+    } else {
+      if (isOperator(char)) {
+        if (formattedExpression && formattedExpression.slice(-1) !== ' ') {
+          formattedExpression += ' '
+        }
+        formattedExpression += char
+        if (i < expression.length - 1 && expression[i + 1] !== ' ') {
+          formattedExpression += ' '
+        }
+      } else {
+        formattedExpression += char
+      }
+      spaceAdded = false
+    }
+  }
+  return formattedExpression.trim()
+}
+
+function changeToDarkMode() {
+  document.body.classList.toggle('dark-mode')
+  if (button_dark_mode.src == 'http://127.0.0.1:5500/assets/dark_mode.svg') {
+    button_dark_mode.src = '/assets/white.svg'
+  } else {
+    button_dark_mode.src = 'http://127.0.0.1:5500/assets/dark_mode.svg'
+  }
+}
+
