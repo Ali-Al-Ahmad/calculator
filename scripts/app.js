@@ -34,4 +34,30 @@ document.addEventListener('keydown', function(event) {
   }
 })
 
+function addSpace() {
+  if (!expression.endsWith(' ') && expression.length > 0) {
+    expression = expression + ' '
+    updateResult()
+  }
+  focusOnInputLastCharacter()
+}
+
+function digitClick(e) {
+  if (isOperator(e.target.innerHTML)) {
+    if (expression.endsWith(' ') || expression.length == 0)
+      expression = expression + e.target.innerHTML + ' '
+    else {
+      expression = expression + ' ' + e.target.innerHTML + ' '
+    }
+  } else {
+    expression = expression + e.target.innerHTML
+  }
+  updateResult()
+}
+
+function updateResult() {
+  result.value = expression
+  result.dispatchEvent(new Event('input'))
+  focusOnInputLastCharacter()
+}
 
