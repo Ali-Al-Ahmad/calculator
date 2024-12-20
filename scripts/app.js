@@ -223,6 +223,8 @@ function changeToDarkMode() {
   let current_source = button_dark_mode.src
   if (current_source.includes('dark')) {
     button_dark_mode.src = current_source.replace('dark_mode.svg', 'white.svg')
-  } 
+  } else {
+    button_dark_mode.src = current_source.replace('white.svg', 'dark_mode.svg')
+  }
 }
 
