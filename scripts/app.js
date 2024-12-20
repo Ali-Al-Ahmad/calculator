@@ -86,3 +86,21 @@ function isNotValidExpression() {
   )
 }
 
+function createTableRow(index, exp, stack) {
+  const new_row = document.createElement('tr')
+  const td1 = document.createElement('td')
+  const td2 = document.createElement('td')
+  const td3 = document.createElement('td')
+  td1.innerHTML = index + '.'
+  td2.innerHTML = exp
+  td3.innerHTML = stack
+  new_row.appendChild(td1)
+  new_row.appendChild(td2)
+  new_row.appendChild(td3)
+  document.querySelector('#stack-table tbody').appendChild(new_row)
+}
+
+function removeRows() {
+  document.querySelector('#stack-table tbody').innerHTML = ''
+}
+
