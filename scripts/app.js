@@ -225,7 +225,7 @@ function changeToDarkMode() {
     button_dark_mode.src ==
     'https://ali-al-ahmad.github.io/assets/dark_mode.svg'
   ) {
-    button_dark_mode.src = 'https://ali-al-ahmad.github.io/assets/dark_mode.svg'
+    button_dark_mode.src = 'https://ali-al-ahmad.github.io/assets/white.svg'
   } else {
     button_dark_mode.src = 'https://ali-al-ahmad.github.io/assets/dark_mode.svg'
   }
