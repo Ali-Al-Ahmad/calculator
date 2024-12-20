@@ -16,6 +16,7 @@ A simple web-based calculator to evaluate prefix and postfix expressions.
 2. put operant to the left for prefix and to the right for postfix
 3. keep spaces between numbers multiple digits are allowed
 4. Click on "=" button to see the result. with steps detailed
+5. Darkmode feature, icon positioned at the top left side of the page
 
 ## Technologies
 - **HTML**, **CSS**, **JavaScript**.
