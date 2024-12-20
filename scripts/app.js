@@ -61,3 +61,28 @@ function updateResult() {
   focusOnInputLastCharacter()
 }
 
+function clearAllFucntion() {
+  expression = ''
+  updateResult()
+}
+
+function deleteLastCharacter() {
+  if (expression.length > 0) {
+    expression = expression.substring(0, expression.length - 1)
+    updateResult()
+  }
+  focusOnInputLastCharacter()
+}
+
+function isNotValidExpression() {
+  return (
+    expression.length < 2 ||
+    expression.includes('I') ||
+    (!expression.includes('+') &&
+      !expression.includes('-') &&
+      !expression.includes('*') &&
+      !expression.includes('/') &&
+      !expression.includes('x'))
+  )
+}
+
