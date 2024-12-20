@@ -108,6 +108,7 @@ function calculatePrefixOrPostfix() {
   expression = expression.trim()
   if (isNotValidExpression()) {
     expression = 'Invalid Expression'
+    removeRows()
     return updateResult()
   }
 
@@ -127,6 +128,7 @@ function calculatePrefixOrPostfix() {
     } else {
       if (my_stack.length < 2) {
         expression = 'Invalid Expression'
+        removeRows()
         return updateResult()
       }
 
@@ -165,6 +167,7 @@ function calculatePrefixOrPostfix() {
 
   if (my_stack.length > 1) {
     expression = 'Invalid Expression'
+    removeRows()
     return updateResult()
   }
   let last_result = my_stack[my_stack.length - 1]
